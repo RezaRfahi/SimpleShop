@@ -1,21 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShopMVC.Data;
 using ShopMVC.Models;
 using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using ShopMVC.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ShopMVC.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ShopMVCContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger, ShopMVCContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var imageItems = await _context.SliderImage.ToListAsync();
+            return View(imageItems);
         }
 
         public IActionResult Privacy()
