@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShopMVC.Data;
 
@@ -10,9 +11,11 @@ using ShopMVC.Data;
 namespace ShopMVC.Migrations
 {
     [DbContext(typeof(ShopMVCContext))]
-    partial class ShopMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20230620212115_ProductsTableCreate")]
+    partial class ProductsTableCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
