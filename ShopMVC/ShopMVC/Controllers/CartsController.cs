@@ -6,7 +6,7 @@ using ShopMVC.Models;
 
 namespace ShopMVC.Controllers
 {
-    public class CartController : Controller
+    public class CartsController : Controller
     {
         private readonly ApplicationDbContext _context;
 

@@ -1,0 +1,33 @@
+@model ShopMVC.Models.CartItem
+
+<h1>Cart Item Details</h1>
+
+<div>
+    <h4>CartId: @Html.DisplayFor(model => model.CartId)</h4>
+    <h4>ProductId: @Html.DisplayFor(model => model.ProductId)</h4>
+    <h4>Quantity: @Html.DisplayFor(model => model.Quantity)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CartId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CartId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Index">Back to Cart Items</a>
+</p>

@@ -1,0 +1,19 @@
+@model ShopMVC.Models.Cart
+
+<h1>Cart Details</h1>
+
+<div>
+    <h4>UserId: @Html.DisplayFor(model => model.UserId)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Index">Back to Cart</a>
+</p>

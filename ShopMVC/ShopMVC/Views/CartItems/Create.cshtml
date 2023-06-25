@@ -1,0 +1,24 @@
+@model ShopMVC.Models.CartItem
+
+<h1>Create Cart Item</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="CartId" class="control-label"></label>
+        <input asp-for="CartId" class="form-control" />
+        <span asp-validation-for="CartId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductId" class="control-label"></label>
+        <input asp-for="ProductId" class="form-control" />
+        <span asp-validation-for="ProductId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity" class="control-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
